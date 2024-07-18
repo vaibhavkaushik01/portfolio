@@ -31,6 +31,12 @@ p{
 .greytextcolor{
     color:rgb(92, 91, 91);
 }
+h3{
+    text-align: center;
+    font-size: 1.7rem;
+    font-family: 'Hind', sans-serif;
+    font-weight: lighter;
+}
 
 
 
@@ -145,12 +151,6 @@ p{
     height: 70%;
     width: 80%;
 }
-h3{
-    text-align: center;
-    font-size: 1.7rem;
-    font-family: 'Hind', sans-serif;
-    font-weight: lighter;
-}
 
 
 
@@ -198,5 +198,46 @@ h3{
 }
 
 .footer{
-
+    background-color: #EEEEEE;
+}
+#CONTACT{
+    display: flex;
+    padding: 30px;
+    justify-content: space-evenly;
+}
+.contact-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+.contact-details>h4{
+    margin-bottom: 20px;
+    font-size: 1.7rem;
+    font-family: 'Hind', sans-serif;
+    font-weight: lighter;
+}
+.social-media>a>img{
+    height: 25px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10px;
+}
+.form>input{
+    height: 20px;
+    width: 400px;
+    border-radius: 5px;
+    border: 1px solid #8f8c8c;
+    padding: 7px;
+}
+.form>textarea{
+    width: 400px;
+    border-radius: 5px;
+    border: 1px solid #8f8c8c;
+    padding: 7px;
 }
