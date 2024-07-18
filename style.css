@@ -95,7 +95,9 @@ p{
     height: 30px;
     padding: 10px;
 }
-
+.svg{
+    margin-top: 10px;
+}
 
 .linkscontainer{
     display:flex;
@@ -143,7 +145,7 @@ p{
     height: 70%;
     width: 80%;
 }
-.project_card>h3{
+h3{
     text-align: center;
     font-size: 1.7rem;
     font-family: 'Hind', sans-serif;
@@ -152,10 +154,28 @@ p{
 
 
 
+.skillbox-container{
+    display: flex;
+    justify-content:space-around;
+}
+.individual-skill{
+    display: flex;
+    padding: 15px;
+    gap: 15px;
+}
+.individual-skill>p{
+    font-weight: 500;
+    font-size: larger;
+}
+.individual-skill>img{
+    height: 30px;
+}
+.individual-skills-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 
 .footer{
-    height: 20vh;
-    background-color: #EEEEEE;
-    margin-top: 30px;
-    display: flex;
+    
 }
