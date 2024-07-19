@@ -235,6 +235,12 @@ h3{
     border: 1px solid #8f8c8c;
     padding: 7px;
 }
+.form>input::placeholder{
+    font-family: "poppins", sans-serif;
+}
+.form>textarea::placeholder{
+    font-family: "poppins", sans-serif;
+}
 .form>textarea{
     width: 400px;
     border-radius: 5px;
