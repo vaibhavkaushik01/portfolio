@@ -2,6 +2,7 @@
    margin: 0;
    padding: 0;
    scroll-behavior: smooth;
+
 }
 
 .headingcenterclass{
@@ -44,13 +45,15 @@ h3{
    display: flex;
    height: 100px; 
    align-items: center;
-   justify-content:space-evenly;
-   gap: 400px;
+   justify-content:space-around;
 }
 .navbar>h3{
     font-family: 'Hind', sans-serif;
     font-size: 2rem;
     font-weight: lighter;
+}
+.scroll_links{
+    display: flex;
 }
 .scroll_links>ul{
     display: flex;
@@ -66,15 +69,61 @@ h3{
 .scroll_links>ul>li>a:hover{
     color:rgb(136, 134, 134);
 }
+.collasped-navbar{
+    display: none;
+    height: 30px;
+    border: none;
+}
+.collasped-navbar>img{
+    height: 30px;
+}
+.hidden-navbar{
+    position: fixed;
+    background-color: rgba(78, 72, 72, 0.747);
+    height: 400px;
+    width: 350px;
+    padding: 30px;
+    z-index: 1;
+    left: 100%;
+    top: 0px;
+    transition: transform 1s ease-in-out;
+}
+.hidden-navbar>ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.hidden-navbar>ul>li>a{
+    text-decoration: none;
+    color: rgb(241, 235, 235);
+    font-family: 'Hind', sans-serif;
+    font-size: 1.3rem;
+}
+.hidden-navbar>ul>li>a:hover{
+    color:rgb(0, 0, 0);
+}
+.hidden-navbar-translate-class{
+    transform: translateX(-100%);
+}
+.navbar-collapser-cross-img{
+    position: absolute;
+    border: none;
+    top: 30px;
+    right: 60px;
+}
+.navbar-collapser-cross-img>img{
+    height: 40px;
+}
 
 
 
 .intro{
     display:flex;
     align-items: center;
-    justify-content:center;
-    gap:100px;
+    justify-content:space-evenly;
     height: 400px;
+    width: 100vw;
     font-family: 'Hind', sans-serif;
     background-color:#EEEEEE ;
 }
@@ -188,7 +237,6 @@ h3{
 .about-me-boxes-container{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 10%;
 }
 .about-me-box{
@@ -256,13 +304,127 @@ h3{
     padding: 7px;
 }
 
-
-/* classes used using js */
-.bounce{
-    animation: bounce 2s  ease-in 1s;
+/* Media queries */
+@media (min-width:800px) and (max-width:1250px){
+    .scroll_links>ul{
+        gap: 25px;
+    }
+    .project_container{
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns:  repeat(2,1fr);
+        justify-items: center;
+        row-gap: 30px;
+    }
 }
 
-@keyframes bounce {
+@media (min-width:460px) and (max-width:800px){
+    .scroll_links>ul{
+        display: none;
+    }
+    .collasped-navbar{
+        display: inline-block;
+    }
+    .myimage{
+        height: 150px;
+    }
+    .intro{
+        flex-direction: column;
+        height: fit-content;
+        gap: 30px;
+        padding: 20px 0px;
+    }
+    .project_container{
+        display: flex;
+        justify-items: center;
+        gap: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .skillbox-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 5vh;
+    }
+    .for-centering{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #CONTACT{
+        flex-direction: column;
+        align-items: start;
+        gap: 5vh;
+        width: fit-content;
+    }
+    .about-me-boxes-container{
+        flex-direction: column;
+        gap: 5vh;
+        align-items: center;
+    }
+}
+
+@media (max-width:459px){
+    .hidden-navbar{
+        width: 90vw;
+    }
+    .scroll_links>ul{
+        display: none;
+    }
+    .collasped-navbar{
+        display: inline-block;
+    }
+    .myimage{
+        height: 150px;
+    }
+    .intro{
+        flex-direction: column;
+        height: fit-content;
+        gap: 30px;
+        padding: 20px 0px;
+    }
+    .project_container{
+        display: flex;
+        justify-items: center;
+        gap: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .skillbox-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 5vh;
+    }
+    .for-centering{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #CONTACT{
+        flex-direction: column;
+        align-items: start;
+        gap: 5vh;
+        width: fit-content;
+    }
+    .about-me-boxes-container{
+        flex-direction: column;
+        gap: 5vh;
+        align-items: center;
+    }
+    .form>input{
+        width: 300px;
+    }
+    .form>textarea{
+        width: 300px;
+    }
+}
+
+/* classes used using js */
+.rotate{
+    animation: rotate 2s  ease-in 1s;
+}
+
+@keyframes rotate {
     0%{
         transform: rotate(0deg);
     }
