@@ -79,7 +79,7 @@ h3{
 }
 .hidden-navbar{
     position: fixed;
-    background-color: rgba(78, 72, 72, 0.747);
+    background-color: rgba(41, 40, 40, 0.925);
     height: 400px;
     width: 350px;
     padding: 30px;
@@ -87,6 +87,9 @@ h3{
     left: 100%;
     top: 0px;
     transition: transform 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .hidden-navbar>ul{
     list-style: none;
@@ -101,7 +104,7 @@ h3{
     font-size: 1.3rem;
 }
 .hidden-navbar>ul>li>a:hover{
-    color:rgb(0, 0, 0);
+    color:orange;
 }
 .hidden-navbar-translate-class{
     transform: translateX(-100%);
